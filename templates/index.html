@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Salary Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+<style>
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+  
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  height: 1cm ;
+  text-align: left;
+  font-size: 30px;
+  color: white; 
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+h3{
+text-align: center;
+color:red;
+background-color: blue;
+}
+</style>
+<body>
+ <div class="login">
+ <header>Adult Salary Forcast</h>
+<br><br><br>
+    <form action="\predict" method="post">
+     <!-- Main Input For Receiving Query to our ML -->
+    	<input type="number" name="age" placeholder="Age" required="required" />
+    	
+        <select name="employertype" id="EmployerType" required="required">
+                <option value="Private">Private</option>
+                <option value="Selfemp_not_inc">Self-emp-not-inc</option>
+                <option value="Local_gov">Local-gov</option>
+                <option value="State_gov">State-gov</option>
+				<option value="Selfemp_inc">Self-emp-inc</option>
+				<option value="Federal_gov">Federal-gov</option>
+				<option value="Without_pay">Without-pay</option>
+				<option value="Never_worked">Never-worked</option>
+
+        </select>
+		
+		<select name="education" id="Education" required="required" >
+                <option value="HS-grad">HS-grad</option>
+                <option value="Some_college">Some-college</option>
+                <option value="Bachelors">Bachelors</option>
+                <option value="Masters">Masters</option>
+				<option value="Assoc_voc">Assoc-voc</option>
+				<option value="11th">11th</option>
+				<option value="Assoc_acdm">Assoc-acdm</option>
+				<option value="10th">10th</option>
+				<option value="7th_to_8th">7th-8th</option>
+				<option value="Prof_school">Prof-school</option>
+				<option value="9th">9th</option>
+				<option value="12th">12th</option>
+				<option value="Doctorate">Doctorate</option>
+				<option value="5th_to_6th">5th-6th</option>
+				<option value="1st_to_4th">1st-4th</option>
+				<option value="Preschool">Preschool</option>		
+        </select>
+		<select name="marital" id="Marital" required="required">
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+        </select>
+		<select name="occupation" id="Occupation" required="required">
+                <option value="Prof_specialty">Prof-specialty</option>
+                <option value="Craft_repair">Craft-repair</option>
+				<option value="Exec_managerial">Exec-managerial</option>
+                <option value="Adm_clerical">Adm-clerical</option>
+                <option value="Sales">Sales</option>
+				<option value="Other_service">Other-service</option>
+                <option value="Machine_op_inspct">Machine-op-inspct</option>
+				<option value="Private">Private</option>
+                <option value="Transport_moving">Transport-moving</option>
+				<option value="Handlers_cleaners">Handlers-cleaners</option>
+                <option value="Farming_fishing">Farming-fishing</option>
+				<option value="Tech_support">Tech-support</option>
+				<option value="Protective_serv">Protective-serv</option>
+                <option value="Armed_Forces">Armed-Forces</option>
+				<option value="Priv_house_serv">Priv-house-serv</option>
+				<option value="Never_worked">Never-worked</option>
+				
+				
+        </select>
+		
+		<select name="relationship" id="Relationship" required="required">
+                <option value="Husband">Husband</option>
+                <option value="Not_in_family">Not-in-family</option>
+				<option value="Own_child">Own-child</option>
+                <option value="Unmarried">Unmarried</option>
+				<option value="Wife">Wife</option>
+                <option value="Other_relative">Other-relative</option>				
+        </select>
+		<select name="race" id="Race" required="required">
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+				<option value="Asian_Pac_Islander">Asian-Pac-Islander</option>
+                <option value="Amer_Indian_Eskimo">Amer-Indian-Eskimo</option>
+				<option value="Other">Other</option>				
+        </select>
+		<select name="sex" id="Sex" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>				
+        </select>
+		
+		<input type="number" name="capital_gain" placeholder="Captial Gain" required="required" />
+		
+		<input type="number" name="capital_loss" placeholder="Capital Loss" required="required" />
+		
+		<input type="number" name="hour_per_week" placeholder="HourPerWeek" required="required" />
+		<br><br><br>
+	   <button id="sub" type="submit" align="center">Predict </button>
+    </form>
+
+   <br>
+   <div >
+   <br><br>
+   <h3>{{name}}</h3>
+   </div>
+ </div>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <footer>
+  <p>© Copyright 2021 Aman Saini <br>
+    amansai97@gmail.com </p>
+</footer>
+
+
+</body>
+</html
